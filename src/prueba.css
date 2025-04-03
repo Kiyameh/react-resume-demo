@@ -1,0 +1,644 @@
+/* src/components/ui/LanguageSwitcher.module.css */
+.LanguageSwitcher_container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0f2fe;
+  z-index: 10;
+}
+.LanguageSwitcher_icon {
+  height: 1rem;
+  width: 1rem;
+  color: #0284c7;
+}
+.LanguageSwitcher_text {
+  color: black;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.LanguageSwitcher_buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.2rem;
+}
+.LanguageSwitcher_button {
+  border-radius: 0.375rem;
+  display: inline-flex;
+  background: none;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s, background-color 0.2s;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  height: auto;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.LanguageSwitcher_button:hover {
+  background-color: #f3f3f3;
+  color: #0369a1;
+}
+.LanguageSwitcher_button.LanguageSwitcher_active {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+@media print {
+  .LanguageSwitcher_container {
+    display: none;
+  }
+}
+
+/* src/components/ui/PdfDownloadButton.module.css */
+.PdfDownloadButton_icon {
+  width: 1rem;
+  height: 1rem;
+  padding-right: 0.5rem;
+}
+.PdfDownloadButton_button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  background-color: #0284c7;
+  color: white;
+  z-index: 10;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s, background-color 0.2s;
+}
+.PdfDownloadButton_button:hover {
+  background-color: #0369a1;
+}
+@media print {
+  .PdfDownloadButton_button {
+    display: none;
+  }
+}
+
+/* src/components/ResumeLayout.module.css */
+.ResumeLayout_resume {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  max-width: 56rem;
+  padding: 32px;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  color: hsl(215.4 16.3% 46.9%);
+}
+@media print {
+  @page {
+    margin: 1cm;
+    size: A4 portrait;
+  }
+  .ResumeLayout_frame {
+    padding-top: 0;
+    background-color: white;
+  }
+  .ResumeLayout_resume {
+    box-shadow: none;
+    padding: 16px;
+  }
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: #0284c7;
+}
+h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+@media print {
+  h2 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+section {
+  margin-top: 0.75rem;
+  margin-bottom: 2.75rem;
+}
+@media print {
+  section {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+}
+
+/* src/components/ResumeHeader.module.css */
+.ResumeHeader_header {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 1.5rem;
+}
+.ResumeHeader_profile {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.ResumeHeader_picture {
+  width: 8rem;
+  height: 8rem;
+  overflow: hidden;
+  border-radius: 8rem;
+  border: 4px solid #d2ebfc;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+@media print {
+  .ResumeHeader_header {
+    padding-bottom: 0.75rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+  }
+  .ResumeHeader_profile {
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+  }
+  .ResumeHeader_picture {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+.ResumeHeader_image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.ResumeHeader_name {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #082f49;
+}
+.ResumeHeader_title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: #6b7280;
+}
+.ResumeHeader_contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #6b7280;
+}
+@media print {
+  .ResumeHeader_contact {
+    justify-content: flex-start;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    gap: 0.75rem;
+  }
+}
+.ResumeHeader_contactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ResumeHeader_icon {
+  height: 1rem;
+  width: 1rem;
+}
+@media print {
+  .ResumeHeader_icon {
+    height: 0.75rem;
+    width: 0.75rem;
+  }
+}
+
+/* src/components/ResumeAbout.module.css */
+.ResumeAbout_card {
+  background-color: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  display: flex;
+  gap: 0.75rem;
+}
+@media print {
+  .ResumeAbout_card {
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+}
+.ResumeAbout_icon {
+  height: 1.25rem;
+  width: 1.25rem;
+  color: #0ea5e9;
+  margin-top: 0.125rem;
+  flex-shrink: 0;
+}
+@media print {
+  .ResumeAbout_icon {
+    height: 1rem;
+    width: 1rem;
+  }
+}
+.ResumeAbout_text {
+  color: #6b7280;
+}
+@media print {
+  .ResumeAbout_text {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+/* src/components/ResumeWorks.module.css */
+.ResumeWorks_work {
+  margin-bottom: 1.5rem;
+}
+.ResumeWorks_workHeader {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+}
+.ResumeWorks_leftHeader {
+  display: flex;
+  flex-direction: column;
+}
+.ResumeWorks_rightHeader {
+  display: flex;
+  text-align: right;
+  gap: 0.5rem;
+}
+@media (min-width: 640px) {
+  .ResumeWorks_workHeader {
+    flex-direction: row;
+  }
+  .ResumeWorks_rightHeader {
+    flex-direction: column;
+  }
+}
+.ResumeWorks_title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: black;
+}
+.ResumeWorks_location {
+  font-size: 0.85rem;
+}
+@media print {
+  .ResumeWorks_title {
+    font-size: 1rem;
+  }
+  .ResumeWorks_company {
+    font-size: 0.75rem;
+  }
+  .ResumeWorks_location {
+    font-size: 0.75rem;
+  }
+}
+.ResumeWorks_points {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+@media print {
+  .ResumeWorks_points {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.75rem;
+  }
+}
+
+/* src/components/Common.module.css */
+.Common_dateChip {
+  max-width: fit-content;
+  display: inline-flex;
+  padding: 0.125rem 0.625rem;
+  font-size: 0.75rem;
+  transition: background-color 0.2s, color 0.2s;
+  font-weight: normal;
+  border-radius: 5rem;
+  border: 1px solid rgb(93, 182, 255);
+  background-color: rgb(240, 249, 255);
+  color: rgb(3, 105, 161);
+  white-space: nowrap;
+}
+.Common_dateChip:hover {
+  background-color: rgb(224, 242, 254);
+}
+@media print {
+  .Common_dateChip {
+    font-size: 0.75rem;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+/* src/components/ResumeCourses.module.css */
+.ResumeCourses_course {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+@media (min-width: 640px) {
+  .ResumeCourses_course {
+    flex-direction: row;
+  }
+}
+.ResumeCourses_degree {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: black;
+}
+@media print {
+  .ResumeCourses_degree {
+    font-size: 1rem;
+  }
+  .ResumeCourses_school {
+    font-size: 0.75rem;
+  }
+}
+
+/* src/components/ResumeTechnologies.module.css */
+.ResumeTechnologies_techContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.ResumeTechnologies_techChip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.75rem;
+  background-color: #e0f2fe;
+  border-radius: 5rem;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+}
+.ResumeTechnologies_techChip:hover {
+  background-color: #bae6fd;
+}
+.ResumeTechnologies_icon {
+  width: 1rem;
+  height: 1rem;
+  color: #0ea5e9;
+}
+.ResumeTechnologies_text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #0369a1;
+}
+@media print {
+  .ResumeTechnologies_techChip {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+  }
+  .ResumeTechnologies_icon {
+    display: none;
+  }
+  .ResumeTechnologies_text {
+    font-size: 0.75rem;
+  }
+}
+
+/* src/components/ResumeSoftSkills.module.css */
+.ResumeSoftSkills_subtitle {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: -0.5rem;
+  color: #0284c7;
+}
+@media print {
+  .ResumeSoftSkills_subtitle {
+    font-size: 0.75rem;
+  }
+}
+.ResumeSoftSkills_container {
+  display: grid;
+  gap: 1rem;
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media print {
+    gap: 0.5rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.ResumeSoftSkills_skill {
+  display: flex;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: #f0f9ff;
+  border-radius: 0.5rem;
+  border: 1px solid #e0f2fe;
+  @media print {
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+}
+.ResumeSoftSkills_icon {
+  margin-top: 0.25rem;
+  color: #0284c7;
+  min-width: 2rem;
+  @media print {
+    display: none;
+  }
+}
+.ResumeSoftSkills_skillTitle {
+  font-weight: 500;
+  color: #0c4a6e;
+  @media print {
+    font-size: 0.875rem;
+  }
+}
+.ResumeSoftSkills_skillDescription {
+  font-size: 0.875rem;
+  @media print {
+    font-size: 0.75rem;
+  }
+}
+
+/* src/components/ResumeProjects.module.css */
+.ResumeProjects_header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ResumeProjects_project {
+  margin-bottom: 1rem;
+}
+.ResumeProjects_title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: black;
+  @media print {
+    font-size: 1rem;
+  }
+}
+.ResumeProjects_icon {
+  height: 1rem;
+  width: 1rem;
+  @media print {
+    display: none;
+  }
+}
+.ResumeProjects_icon:hover {
+  color: #0284c7;
+}
+.ResumeProjects_technologies {
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  @media print {
+    gap: 0.125rem;
+  }
+}
+.ResumeProjects_chip {
+  border: transparent;
+  background-color: rgb(240, 249, 255);
+  color: rgb(3, 105, 161);
+  display: inline-flex;
+  align-items: center;
+  border-radius: 5rem;
+  padding: 0.125rem 0.625rem;
+  font-size: 0.75rem;
+  transition: background-color 0.2s;
+  min-width: fit-content;
+  font-weight: 400;
+}
+.ResumeProjects_chip:hover {
+  background-color: rgb(224, 242, 254);
+}
+@media print {
+  .ResumeProjects_chip {
+    font-size: 0.75rem;
+    padding: 0;
+  }
+}
+@media print {
+  .ResumeProjects_description {
+    font-size: 0.75rem;
+  }
+}
+.ResumeProjects_features {
+  margin-top: 0.75rem;
+}
+.ResumeProjects_features span {
+  font-weight: 600;
+  color: #0284c7;
+}
+
+/* src/components/ResumeContact.module.css */
+.ResumeContact_socialButtons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+@media print {
+  .ResumeContact_socialButtons {
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.75rem;
+  }
+}
+.ResumeContact_button {
+  height: 2.5rem;
+  width: 2.5rem;
+  color: #0284c7;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid #99ddff;
+  transition: color 0.2s, background-color 0.2s;
+  cursor: pointer;
+}
+.ResumeContact_button:hover {
+  background-color: #dff3fd;
+}
+@media print {
+  .ResumeContact_button {
+    display: none;
+  }
+}
+.ResumeContact_bigIcon {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+.ResumeContact_url {
+  display: none;
+}
+@media print {
+  .ResumeContact_url {
+    display: flex;
+    align-items: center;
+    color: #0284c7;
+  }
+}
+.ResumeContact_icon {
+  margin-right: 0.25rem;
+  margin-left: 0.25rem;
+  height: 1rem;
+  width: 1rem;
+  color: #0284c7;
+}
+.ResumeContact_atribution {
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+@media print {
+  .ResumeContact_atribution {
+    padding-top: 0.25rem;
+    font-size: 0.75rem;
+  }
+}
+.ResumeContact_atribution a {
+  display: flex;
+  align-items: center;
+}
+@media print {
+  .ResumeContact_github {
+    display: none;
+  }
+}
