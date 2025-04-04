@@ -10,7 +10,7 @@ import {
   ResumeTechnologies,
   ResumeWorks,
 } from 'react-resume-kit'
-import 'react-resume-kit/styles'
+import 'react-resume-kit/style.css'
 
 import {content} from './data/content'
 
